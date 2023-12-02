@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - main
-      - Development
+      - dev
   pull_request: {}
 
 concurrency:
