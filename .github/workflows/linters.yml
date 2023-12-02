@@ -9,7 +9,6 @@ on:
 concurrency:
   group: ${{ github.job }}-${{ github.ref }}
   cancel-in-progress: true
-  jobs:
     linters:
       name: ⬣ ESLint
       runs-on: ubuntu-latest
