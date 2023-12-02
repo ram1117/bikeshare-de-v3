@@ -1,9 +1,8 @@
 import React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
 import "./globals.css"
-
-const inter = Inter({ subsets: ["latin"] })
+import MenuBar from "@/components/menubar/MenuBar"
+import { lato, novaSquare } from "@/atoms/fonts"
 
 export const metadata: Metadata = {
   title: "CycleSharing",
@@ -17,7 +16,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${lato.variable} ${novaSquare.variable} text-primary-text bg-body-bg`}
+      >
+        <MenuBar />
+        <section className="mt-16 text-secondary-text">{children}</section>
+      </body>
     </html>
   )
 }
