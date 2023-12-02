@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import "./globals.css"
 import MenuBar from "@/components/menubar/MenuBar"
 import { lato, novaSquare } from "@/atoms/fonts"
+import StoreProvider from "@/lib/storeProvider"
 
 export const metadata: Metadata = {
   title: "CycleSharing",
@@ -20,7 +21,9 @@ export default function RootLayout({
         className={`${lato.variable} ${novaSquare.variable} text-primary-text bg-body-bg`}
       >
         <MenuBar />
-        <section className="mt-16 text-secondary-text">{children}</section>
+        <StoreProvider>
+          <main className="mt-16 text-secondary-text">{children}</main>
+        </StoreProvider>
       </body>
     </html>
   )
