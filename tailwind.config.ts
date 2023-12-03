@@ -29,10 +29,12 @@ const config: Config = {
       },
       colors: {
         "menubar-bg": "#000B02",
-        "primary-text": "#0d0d0d",
+        "primary-text": "#002C08",
         "secondary-text": "#F5F5DC",
         "body-bg": "rgba(77, 140, 87, 0.2)",
         "citytile-bg": "#002C08",
+        "primary-border": "#002C08",
+        "secondary-border": "#7A7A7A",
       },
     },
   },

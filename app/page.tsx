@@ -17,8 +17,7 @@ export default async function Home() {
   const refinedData = await fetchBikeData()
 
   return (
-    <section className="flex flex-col items-center justify-between min-h-[70vh] border-2">
-      <h1 className="text-primary-text">Cycle Sharing</h1>
+    <section className="flex flex-col items-center justify-start md:justify-center min-h-[90vh] h-max">
       <MainPageWrapper data={refinedData} />
     </section>
   )

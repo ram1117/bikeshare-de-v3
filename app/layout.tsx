@@ -16,9 +16,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className="bg-body-img-bg bg-auto md:bg-cover bg-no-repeat min-h-screen"
+    >
       <body
-        className={`${lato.variable} ${novaSquare.variable} text-primary-text bg-body-bg bg-body-img-bg bg-auto md:bg-cover bg-no-repeat min-h-screen min-w-screen`}
+        className={`${lato.variable} ${novaSquare.variable} text-primary-text min-w-screen`}
       >
         <MenuBar />
         <StoreProvider>
