@@ -1,9 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit"
 import { bikesApi } from "@/api/bikesApiService"
+import bikedataSlice from "./features/bikedataSlice"
 
 export const makeStore = () =>
   configureStore({
-    reducer: { [bikesApi.reducerPath]: bikesApi.reducer },
+    reducer: {
+      [bikesApi.reducerPath]: bikesApi.reducer,
+      bikedata: bikedataSlice,
+    },
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware().concat(bikesApi.middleware),
   })

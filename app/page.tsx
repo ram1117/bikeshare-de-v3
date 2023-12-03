@@ -1,8 +1,19 @@
 import React from "react"
-// import { useGetBikeNetworksQuery } from "@/api/bikesApiService"
+import { refineBikeData } from "@/utils"
 
-export default function Home() {
-  // const { isSuccess, data } = useGetBikeNetworksQuery("")
+export const fetchBikeData = async () => {
+  const res = await fetch("http://api.citybik.es/v2/networks")
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data")
+  }
+  const bikeNetworkData = await res.json()
+  const refinedData = refineBikeData(bikeNetworkData)
+  return refinedData
+}
+
+export default async function Home() {
+  // const refinedData = await fetchBikeData()
 
   return (
     <section className="flex flex-col items-center justify-between">
