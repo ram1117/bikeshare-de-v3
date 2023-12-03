@@ -2,7 +2,8 @@
   "extends": ["next", "prettier", "airbnb", "airbnb-typescript"],
   "rules": {
     "react/require-default-props": "off",
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "max-len": "off"
   },
   "parserOptions": {
     "project": "./tsconfig.json"

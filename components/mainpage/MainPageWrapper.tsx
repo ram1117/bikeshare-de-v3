@@ -1,9 +1,7 @@
-"use client"
-
-import React from "react"
+import React from "react";
 // import ButtonPanel from "./ButtonPanel"
-import SearchInput from "./SearchInput"
-import CitiesTiles from "./CitiesTiles"
+import SearchInput from "./SearchInput";
+import CitiesTiles from "./CitiesTiles";
 
 const TOPCITIES = [
   "Berlin",
@@ -14,19 +12,23 @@ const TOPCITIES = [
   "Stuttgart",
   "Düsseldorf",
   "Dortmund",
-]
+];
 
 interface MainPageWrapperProps {
-  data: any
+  data: any;
 }
 
 function MainPageWrapper({ data }: MainPageWrapperProps) {
   // const [cities, setCities] = useState(data.cities)
   // const [filterByChar, setFilterByChar] = useState("")
 
-  const topCities = data.cities.filter((item: any) =>
+  const topCitiesData = data.cities.filter((item: any) =>
     TOPCITIES.includes(item.city)
-  )
+  );
+
+  const sortedCities = topCitiesData.sort((item1: any, item2: any) =>
+    item1.city > item2.city ? 1 : -1
+  );
 
   // useEffect(() => {
   //   if (filterByChar !== "") {
@@ -46,9 +48,9 @@ function MainPageWrapper({ data }: MainPageWrapperProps) {
         setFilterByChar={setFilterByChar}
       /> */}
       <SearchInput citiesList={data.cities} />
-      <CitiesTiles citiesList={topCities} />
+      <CitiesTiles citiesList={sortedCities} />
     </section>
-  )
+  );
 }
 
-export default MainPageWrapper
+export default MainPageWrapper;
