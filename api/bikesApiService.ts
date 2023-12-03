@@ -1,14 +1,14 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const APIURL = "http://api.citybik.es/v2/"
+const APIURL = "http://api.citybik.es/v2/";
 
 export const bikesApi = createApi({
   reducerPath: "bikes",
   baseQuery: fetchBaseQuery({
     baseUrl: APIURL,
     prepareHeaders: (headers) => {
-      headers.set("Content", "Content-Type:application/json")
-      return headers
+      headers.set("Content", "Content-Type:application/json");
+      return headers;
     },
   }),
 
@@ -20,6 +20,6 @@ export const bikesApi = createApi({
       }),
     }),
   }),
-})
+});
 
-export const { useGetBikeNetworksQuery } = bikesApi
+export const { useGetBikeNetworksQuery } = bikesApi;

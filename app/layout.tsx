@@ -1,19 +1,19 @@
-import React from "react"
-import type { Metadata } from "next"
-import "./globals.css"
-import MenuBar from "@/components/menubar/MenuBar"
-import { lato, novaSquare } from "@/atoms/fonts"
-import StoreProvider from "@/lib/storeProvider"
+import React from "react";
+import type { Metadata } from "next";
+import "./globals.css";
+import MenuBar from "@/components/menubar/MenuBar";
+import { lato, novaSquare } from "@/atoms/fonts";
+import StoreProvider from "@/lib/storeProvider";
 
 export const metadata: Metadata = {
   title: "CycleSharing",
   description: "Bike share app for German cities",
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html
@@ -29,5 +29,5 @@ export default function RootLayout({
         </StoreProvider>
       </body>
     </html>
-  )
+  );
 }

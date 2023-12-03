@@ -1,6 +1,6 @@
 const refineBikeData = (data: any) => {
-  const newList: any = []
-  const newCapitals: any = []
+  const newList: any = [];
+  const newCapitals: any = [];
 
   data.networks.forEach((network: any) => {
     if (network.location.country === "DE") {
@@ -11,18 +11,18 @@ const refineBikeData = (data: any) => {
         latitude: network.location.latitude,
         longitude: network.location.longitude,
         id: network.id,
-      })
-      const { city } = network.location
-      const firstLetter = city.charAt(0)
+      });
+      const { city } = network.location;
+      const firstLetter = city.charAt(0);
       if (newCapitals.indexOf(firstLetter) === -1) {
-        newCapitals.push(firstLetter)
+        newCapitals.push(firstLetter);
       }
     }
-  })
+  });
   return {
     cities: [...newList],
     cityCapitals: [...newCapitals],
-  }
-}
+  };
+};
 
-export default refineBikeData
+export default refineBikeData;
