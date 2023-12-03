@@ -54,7 +54,7 @@ function SearchInput({ citiesList }: SearchInputProps) {
         {searchEntered && (
           <button
             type="button"
-            className="absolute right-4 top-[25%] lg:top-[35%]"
+            className="absolute right-4 top-[25%]"
             onClick={() => setSearchString("")}
           >
             <ImageWrapper
@@ -66,7 +66,7 @@ function SearchInput({ citiesList }: SearchInputProps) {
         )}
       </div>
 
-      <div className="z-[90] bg-white w-full absolute ">
+      <div className="z-[90] bg-white w-full absolute">
         {searchEntered && (
           <ul className="max-h-[40vh] overflow-auto">
             {searchResult.length === 0 && (

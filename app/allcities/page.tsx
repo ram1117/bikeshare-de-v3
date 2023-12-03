@@ -1,6 +1,6 @@
 import React from "react";
 import { refineBikeData } from "@/utils";
-import MainPageWrapper from "@/components/mainpage/MainPageWrapper";
+import AllCitiesWrapper from "@/components/allcities/AllCitiesWrapper";
 
 export const fetchBikeData = async () => {
   const res = await fetch("http://api.citybik.es/v2/networks");
@@ -13,12 +13,13 @@ export const fetchBikeData = async () => {
   return refinedData;
 };
 
-export default async function Home() {
+const AllCitiesPage = async () => {
   const refinedData = await fetchBikeData();
-
   return (
-    <section className="flex flex-col items-center justify-start md:justify-center min-h-[90vh] h-max mb-12">
-      <MainPageWrapper data={refinedData} />
+    <section className="flex flex-col items-center justify-start min-h-[90vh] h-max">
+      <AllCitiesWrapper data={refinedData} />
     </section>
   );
-}
+};
+
+export default AllCitiesPage;

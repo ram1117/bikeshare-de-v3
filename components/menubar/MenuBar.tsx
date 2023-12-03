@@ -5,7 +5,7 @@ import AppLogo from "@/public/icons/app-logo.svg";
 
 function MenuBar() {
   return (
-    <nav className="fixed inset-x-0 top-0 flex justify-center items-center md:justify-start px-4 bg-menubar-gradient py-2 shadow-lg z-[999]">
+    <nav className="fixed inset-x-0 top-0 flex justify-center items-center md:justify-start p-4 bg-menubar-gradient shadow-lg z-[999]">
       <Link href="/">
         <div className="flex gap-2">
           <ImageWrapper

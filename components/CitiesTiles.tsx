@@ -5,16 +5,17 @@ import ArrowIcon from "@/public/icons/icon-arrow-right.svg";
 
 interface CitiesTilesProps {
   citiesList: any;
+  containerClassName?: string;
 }
 
-function CitiesTiles({ citiesList }: CitiesTilesProps) {
+function CitiesTiles({ citiesList, containerClassName }: CitiesTilesProps) {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-2 sm:gap-4 w-full justify-center my-4 md:my-8 auto-rows-fr">
+    <div
+      className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-2 sm:gap-4 w-full justify-center my-4 md:my-8 auto-rows-max ${containerClassName}`}
+    >
       {citiesList.map((cityObj: any) => (
         <div
           className="p-2 bg-citytile-bg shadow-xl rounded-lg relative"
-          data-href={cityObj.href}
-          data-testid="cities"
           key={cityObj.id}
         >
           <h3 className="font-bold text-base lg:text-xl pb-1">

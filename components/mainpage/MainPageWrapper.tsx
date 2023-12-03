@@ -1,15 +1,14 @@
 import React from "react";
 // import ButtonPanel from "./ButtonPanel"
+import Link from "next/link";
 import SearchInput from "./SearchInput";
-import CitiesTiles from "./CitiesTiles";
+import CitiesTiles from "../CitiesTiles";
 
 const TOPCITIES = [
   "Berlin",
   "Hamburg",
   "München",
   "Köln",
-  "Frankfurt",
-  "Stuttgart",
   "Düsseldorf",
   "Dortmund",
 ];
@@ -19,9 +18,6 @@ interface MainPageWrapperProps {
 }
 
 function MainPageWrapper({ data }: MainPageWrapperProps) {
-  // const [cities, setCities] = useState(data.cities)
-  // const [filterByChar, setFilterByChar] = useState("")
-
   const topCitiesData = data.cities.filter((item: any) =>
     TOPCITIES.includes(item.city)
   );
@@ -30,26 +26,16 @@ function MainPageWrapper({ data }: MainPageWrapperProps) {
     item1.city > item2.city ? 1 : -1
   );
 
-  // useEffect(() => {
-  //   if (filterByChar !== "") {
-  //     const filteredCities = data.cities.filter(
-  //       (cityObj: any) => cityObj.city.charAt(0) === filterByChar
-  //     )
-  //     setCities(filteredCities)
-  //   } else {
-  //     setCities(data.cities)
-  //   }
-  // }, [filterByChar, data.cities])
-
   return (
-    <section className="flex flex-col justify-center items-center w-11/12 max-w-[1280px]">
-      {/* <ButtonPanel
-        capitals={data.cityCapitals}
-        setFilterByChar={setFilterByChar}
-      /> */}
+    <div className="flex flex-col justify-center items-center w-11/12 max-w-[1280px]">
       <SearchInput citiesList={data.cities} />
       <CitiesTiles citiesList={sortedCities} />
-    </section>
+      <Link href="/allcities">
+        <div className="bg-citytile-bg rounded-lg shadow-xl px-12 py-4 font-bold">
+          See All Cities..
+        </div>
+      </Link>
+    </div>
   );
 }
 
