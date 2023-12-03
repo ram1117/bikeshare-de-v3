@@ -1,10 +1,10 @@
-import React from "react"
-import Link from "next/link"
-import ImageWrapper from "@/atoms/ImageWrapper"
-import ArrowIcon from "@/public/icons/icon-arrow-right.svg"
+import React from "react";
+import Link from "next/link";
+import ImageWrapper from "@/atoms/ImageWrapper";
+import ArrowIcon from "@/public/icons/icon-arrow-right.svg";
 
 interface CitiesTilesProps {
-  citiesList: any
+  citiesList: any;
 }
 
 function CitiesTiles({ citiesList }: CitiesTilesProps) {
@@ -40,7 +40,7 @@ function CitiesTiles({ citiesList }: CitiesTilesProps) {
         </div>
       ))}
     </div>
-  )
+  );
 }
 
-export default CitiesTiles
+export default CitiesTiles;

@@ -1,21 +1,21 @@
-"use client"
+"use client";
 
-import React from "react"
+import React from "react";
 
 interface ButtonPanelProps {
-  capitals: any
-  setFilterByChar: Function
+  capitals: any;
+  setFilterByChar: Function;
 }
 
 function ButtonPanel({ capitals, setFilterByChar }: ButtonPanelProps) {
-  const sortedList = [...capitals].sort()
+  const sortedList = [...capitals].sort();
   const handleClick = (char: string) => {
-    setFilterByChar(char)
-  }
+    setFilterByChar(char);
+  };
 
   const handleReset = () => {
-    setFilterByChar("")
-  }
+    setFilterByChar("");
+  };
 
   return (
     <div className="flex gap-2 flex-wrap items-center justify-center">
@@ -38,7 +38,7 @@ function ButtonPanel({ capitals, setFilterByChar }: ButtonPanelProps) {
         </button>
       ))}
     </div>
-  )
+  );
 }
 
-export default ButtonPanel
+export default ButtonPanel;

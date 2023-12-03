@@ -1,4 +1,4 @@
-import refineBikeData from "./refineBikeData"
-import replaceUmlauts from "./replaceUmlauts"
+import refineBikeData from "./refineBikeData";
+import replaceUmlauts from "./replaceUmlauts";
 
-export { refineBikeData, replaceUmlauts }
+export { refineBikeData, replaceUmlauts };

@@ -1,12 +1,12 @@
-import React from "react"
-import Image from "next/image"
+import React from "react";
+import Image from "next/image";
 
 interface ImageWrapperProps {
-  src: any
-  alt: string
-  imageSize: string
-  sizes?: string
-  className?: string
+  src: any;
+  alt: string;
+  imageSize: string;
+  sizes?: string;
+  className?: string;
 }
 
 function ImageWrapper({
@@ -26,7 +26,7 @@ function ImageWrapper({
         fill
       />
     </div>
-  )
+  );
 }
 
-export default ImageWrapper
+export default ImageWrapper;
