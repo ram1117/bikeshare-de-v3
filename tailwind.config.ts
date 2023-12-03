@@ -32,6 +32,7 @@ const config: Config = {
         "primary-text": "#0d0d0d",
         "secondary-text": "#F5F5DC",
         "body-bg": "rgba(77, 140, 87, 0.2)",
+        "citytile-bg": "#002C08",
       },
     },
   },
