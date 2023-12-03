@@ -14,7 +14,13 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "menubar-gradient":
-          "linear-gradient(to right,#003312 0%, #046132 50%, #003312 100%)",
+          "linear-gradient(to right,#000B02 0%, #002C08 50%, #000B02 100%)",
+
+        "body-img-bg":
+          "linear-gradient(rgba(77, 140, 87, 0.9),rgba(77, 140, 87, 0.9) 100%), url('/main-bg.jpg')",
+      },
+      backgroundColor: {
+        "body-img-bg-color": "rgba(77, 140, 87, 0.2)",
       },
       fontFamily: {
         lato: "var(--font-lato)",
@@ -22,7 +28,7 @@ const config: Config = {
         novasquare: "var(--font-novasquare)",
       },
       colors: {
-        "menubar-bg": "#002613",
+        "menubar-bg": "#000B02",
         "primary-text": "#0d0d0d",
         "secondary-text": "#F5F5DC",
         "body-bg": "rgba(77, 140, 87, 0.2)",
