@@ -13,7 +13,7 @@ export const fetchBikeData = async () => {
   return refinedData;
 };
 
-const AllCitiesPage = async () => {
+const CitiesPage = async () => {
   const refinedData = await fetchBikeData();
   return (
     <section className="flex flex-col items-center justify-start min-h-[90vh] h-max">
@@ -22,4 +22,4 @@ const AllCitiesPage = async () => {
   );
 };
 
-export default AllCitiesPage;
+export default CitiesPage;
