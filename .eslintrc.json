@@ -7,7 +7,8 @@
     "react/jsx-one-expression-per-line": "off",
     "@typescript-eslint/quotes": "off",
     "implicit-arrow-linebreak": "off",
-    " @typescript-eslint/comma-dangle": "off"
+    "@typescript-eslint/comma-dangle": "off",
+    "function-paren-newline": "off"
   },
   "parserOptions": {
     "project": "./tsconfig.json"
