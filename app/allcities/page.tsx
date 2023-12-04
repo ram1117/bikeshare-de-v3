@@ -3,7 +3,7 @@ import { refineBikeData } from "@/utils";
 import AllCitiesWrapper from "@/components/allcities/AllCitiesWrapper";
 
 export const fetchBikeData = async () => {
-  const res = await fetch("http://api.citybik.es/v2/networks");
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BIKEDATA_API_URL}`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");

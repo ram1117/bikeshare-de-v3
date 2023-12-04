@@ -7,7 +7,7 @@ const MapWrapper = dynamic(() => import("@/components/map/MapWrapper"), {
 
 const fetchNetworkDetails = async (networkId: string) => {
   const response = await fetch(
-    `http://api.citybik.es/v2/networks/${networkId}`
+    `${process.env.NEXT_PUBLIC_BIKEDATA_API_URL}/${networkId}`
   );
   if (!response.ok) throw new Error("Error getting Data");
   return response.json();
