@@ -29,7 +29,7 @@ function CitiesTiles({ citiesList, containerClassName }: CitiesTilesProps) {
           <p className="flex gap-6">
             {` ${cityObj.latitude}`},{` ${cityObj.longitude}`}
           </p>
-          <Link href={`details/${cityObj.id}`}>
+          <Link href={`/network/${cityObj.id}`}>
             <div className="h-max w-max absolute right-4 bottom-4">
               <ImageWrapper
                 src={ArrowIcon}

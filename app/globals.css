@@ -2,8 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+.leaflet-popup-content-wrapper {
+  position: relative;
+  border: 1px solid #002c08;
+  color: #002c08;
+}
+.leaflet-popup-content-wrapper > div {
+  padding-bottom: 0.3rem;
+  padding-top: 0.3rem;
 }
 
-body {
+.leaflet-popup-close-button > span {
+  position: absolute;
+  right: 25%;
+  top: 5%;
+  color: #002c08;
+  font-size: 1.5rem;
 }

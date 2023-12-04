@@ -1,65 +1,67 @@
-# Project Title
-
-Simple overview of use/purpose.
+# BikeShare - DE - V3
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+**BikeShare - DE - V3** is an improved version of my previous [cycleshare-de](https://github.com/ram1117/cyclesharing-de) and [cyclesharing-de-v2](https://github.com/ram1117/cyclesharing-de-v2) project. The data is obtained from [CityBikes API](https://api.citybik.es/v2/).
+I have swtiched to using NextJS14, Typescript and TailwindCSS. I am fetching and processing the data Server Side, thereby signigicantly improving the page load speeds.
 
 ## Getting Started
 
 ### Dependencies
 
-- Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-- ex. Windows 10
+- Need NPM to install the packages needed for the project
+- Need Git and Github account to setup and contribute to the project
 
 ### Installing
 
-- How/where to download your program
-- Any modifications needed to be made to files/folders
+- Clone the repo in your local machine.
+
+  ```
+  https://github.com/ram1117/cyclesharing-de-v2.git
+  ```
+
+- Run the following command to install the project dependencies using npm
+  ```
+  cd bikeshare-de-v3
+  ```
+  ```
+  npm install
+  ```
 
 ### Executing program
 
-- How to run the program
-- Step-by-step bullets
+- Run the following command to start the NextJS Dev server
 
-```
-code blocks for commands
-```
+  ```
+  npm run dev
+  ```
 
 ## Help
 
-Any advise for common problems or issues.
+Please raise a Github issue for errors or bugs.
 
 ```
-command to run if program contains helper info
+https://github.com/ram1117/bikeshare-de-v3/issues
 ```
 
 ## Authors
 
-Contributors names and contact info
+### Ram Kumar Karuppusamy
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+[@ram1117](https://github.com/ram1117) <br />
+[ram kumar karuppusamy](https://www.linkedin.com/in/ram-kumar-karuppusamy/)
 
 ## Version History
 
-- 0.2
-  - Various bug fixes and optimizations
-  - See [commit change]() or See [release history]()
 - 0.1
   - Initial Release
 
 ## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+This project is [MIT](./LICENSE) licensed. See the LICENSE.md file for details
 
 ## Acknowledgments
 
-Inspiration, code snippets, etc.
+The following tutorial greatly helped in customizing the react-leaflet map used in the project.
 
-- [awesome-readme](https://github.com/matiassingers/awesome-readme)
-- [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-- [dbader](https://github.com/dbader/readme-template)
-- [zenorocha](https://gist.github.com/zenorocha/4526327)
-- [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+- [jan mueller](https://jan-mueller.at/blog/react-leaflet/)

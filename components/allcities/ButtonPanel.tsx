@@ -22,7 +22,7 @@ function ButtonPanel({
         callBackFunction={setFilterChar}
         isActive={filterChar === ""}
       >
-        All
+        Alle
       </ButtonPanelItem>
       {sortedList.map((char) => (
         <ButtonPanelItem

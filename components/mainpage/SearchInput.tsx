@@ -80,7 +80,7 @@ function SearchInput({ citiesList }: SearchInputProps) {
               </li>
             )}
             {searchResult.map((item: any) => (
-              <Link href={`details/${item.id}`} key={item.id}>
+              <Link href={`/network/${item.id}`} key={item.id}>
                 <li className="text-primary-text p-2 md:p-4 border-b-2 border-dotted">
                   <p className="font-bold text-sm md:text-base">{item.city}</p>
                   <p className="text-xs md:text-sm">{item.name}</p>
