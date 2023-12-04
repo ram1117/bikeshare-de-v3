@@ -15,7 +15,7 @@ function MenuBar() {
             imageSize="h-[24px] w-[24px]"
           />
           <h1 className="font-semibold lg:font-bold text-lg lg:text-xl font-novasquare text-secondary-text">
-            Cycle Share
+            Bike Share <span className="text-xs font-semibold">DE</span>
           </h1>
         </div>
       </Link>

@@ -6,7 +6,7 @@ import { lato, novaSquare } from "@/atoms/fonts";
 import StoreProvider from "@/lib/storeProvider";
 
 export const metadata: Metadata = {
-  title: "CycleSharing",
+  title: "BikeShareDE",
   description: "Bike share app for German cities",
 };
 

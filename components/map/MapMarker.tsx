@@ -23,13 +23,13 @@ function MapMarker({ station }: MapMarkerProps) {
             {station.name}
           </h2>
           <h2 className="font-md text-sm lg:text-base">
-            Free Bikes: {station.free_bikes}
+            Freie Bikes: {station.free_bikes}
           </h2>
           <h2 className="font-md text-sm lg:text-base">
-            Vacant Slots:{" "}
+            leere Stellplätze:{" "}
             {station.empty_slots === null ? " N/A" : station.empty_slots}
           </h2>
-          <h2 className="font-md text-sm lg:text-base">Co-ordinates:</h2>
+          <h2 className="font-md text-sm lg:text-base">Koordinaten:</h2>
           <h2 className="font-md text-sm lg:text-base">{`${station.latitude} , ${station.longitude}`}</h2>
         </div>
       </Popup>

@@ -32,7 +32,7 @@ function MainPageWrapper({ data }: MainPageWrapperProps) {
       <CitiesTiles citiesList={sortedCities} />
       <Link href="/allcities">
         <div className="bg-citytile-bg rounded-lg shadow-xl px-12 py-4 font-bold">
-          See All Cities..
+          Alle Städte..
         </div>
       </Link>
     </div>

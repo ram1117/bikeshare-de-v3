@@ -51,7 +51,8 @@ function MapWrapper({ networkData, busyStations }: MapWrapperProps) {
                     {station.name}
                   </h2>
                   <h3 className="font-md text-sm lg:text-base">
-                    Free Bikes:
+                    Freie Bikes:
+                    {"  "}
                     {station.free_bikes}
                   </h3>
                   <h3 className="font-md text-sm lg:text-base">{`${station.latitude} , ${station.longitude}`}</h3>
