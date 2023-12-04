@@ -10,26 +10,28 @@ interface MapMarkerProps {
 const MarkerIcon = icon({
   iconUrl: "/icons/icon-marker-1.svg",
   iconRetinaUrl: "/icons/icon-marker-1.svg",
-  iconSize: [24, 24],
+  iconSize: [32, 32],
   iconAnchor: [12, 24],
-  // shadowUrl: "/static/leaflet/marker-shadow.png",
-  // shadowRetinaUrl: "/static/leaflet/marker-shadow.png",
-  // shadowSize: [41, 41],
-  // shadowAnchor: [12, 41],
 });
 
 function MapMarker({ station }: MapMarkerProps) {
   return (
     <Marker position={[station.latitude, station.longitude]} icon={MarkerIcon}>
       <Popup>
-        <h2>{station.name}</h2>
-        <h2>{station.free_bikes}</h2>
-        <h2>{station.empty_slots === null ? " N/A" : station.empty_slots}</h2>
-        <input
-          className="coordinates"
-          readOnly
-          value={`${station.latitude} , ${station.longitude}`}
-        />
+        <div>
+          <h2 className="font-bold text-sm lg:text-lg w-[70%] capitalize">
+            {station.name}
+          </h2>
+          <h2 className="font-md text-sm lg:text-base">
+            Free Bikes: {station.free_bikes}
+          </h2>
+          <h2 className="font-md text-sm lg:text-base">
+            Vacant Slots:{" "}
+            {station.empty_slots === null ? " N/A" : station.empty_slots}
+          </h2>
+          <h2 className="font-md text-sm lg:text-base">Co-ordinates:</h2>
+          <h2 className="font-md text-sm lg:text-base">{`${station.latitude} , ${station.longitude}`}</h2>
+        </div>
       </Popup>
     </Marker>
   );
