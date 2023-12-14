@@ -5,6 +5,9 @@
 **BikeShare - DE - V3** is an improved version of my previous [cycleshare-de](https://github.com/ram1117/cyclesharing-de) and [cyclesharing-de-v2](https://github.com/ram1117/cyclesharing-de-v2) project. The data is obtained from [CityBikes API](https://api.citybik.es/v2/).
 I have swtiched to using NextJS14, Typescript and TailwindCSS. I am fetching and processing the data Server Side, thereby signigicantly improving the page load speeds.
 
+### Live Demo
+[Live Demo on Vercel](https://bikeshare-de-v3.vercel.app/)
+
 ## Getting Started
 
 ### Dependencies
