@@ -1,15 +1,15 @@
-import React from "react";
-import dynamic from "next/dynamic";
+import React from 'react';
+import dynamic from 'next/dynamic';
 
-const MapWrapper = dynamic(() => import("@/components/map/MapWrapper"), {
+const MapWrapper = dynamic(() => import('@/components/map/MapWrapper'), {
   ssr: false,
 });
 
 const fetchNetworkDetails = async (networkId: string) => {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_BIKEDATA_API_URL}/${networkId}`
+    `http://api.citybik.es/v2/networks/${networkId}`
   );
-  if (!response.ok) throw new Error("Error getting Data");
+  if (!response.ok) throw new Error('Error getting Data');
   return response.json();
 };
 
