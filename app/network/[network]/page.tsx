@@ -11,8 +11,7 @@ const fetchNetworkDetails = async (networkId: string) => {
     `http://api.citybik.es/v2/networks/${networkId}`
   );
   if (!response.ok) console.error(error);
-  const data = response.json();
-  console.log(data);
+  const data = await response.json();
   return data;
 };
 
