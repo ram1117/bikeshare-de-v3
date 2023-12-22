@@ -3,7 +3,12 @@ import MapWrapper from '@/components/map/MapWrapper';
 
 const fetchNetworkDetails = async (networkId: string) => {
   const response = await fetch(
-    `http://api.citybik.es/v2/networks/${networkId}`
+    `http://api.citybik.es/v2/networks/${networkId}`,
+    {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }
   );
   if (!response.ok) throw new Error('Error getting data');
   const data = await response.json();
