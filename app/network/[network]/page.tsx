@@ -11,14 +11,13 @@ const fetchNetworkDetails = async (networkId: string) => {
     `http://api.citybik.es/v2/networks/${networkId}`
   );
   if (!response.ok) console.error(error);
-  // const data = response.json();
-  console.log(response);
-  return response.json();
+  const data = response.json();
+  console.log(data);
+  return data;
 };
 
 const NetworkPage = async ({ params }: { params: { network: string } }) => {
   const { network: networkData } = await fetchNetworkDetails(params.network);
-
   const sortedStations = networkData.stations.sort(
     (a: any, b: any) => b.free_bikes - a.free_bikes
   );
