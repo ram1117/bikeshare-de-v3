@@ -13,11 +13,12 @@ const fetchNetworkDetails = async (networkId: string) => {
   if (!response.ok) console.error(error);
   // const data = response.json();
   console.log(response);
-  return undefined;
+  return response.json();
 };
 
 const NetworkPage = async ({ params }: { params: { network: string } }) => {
   const { network: networkData } = await fetchNetworkDetails(params.network);
+
   const sortedStations = networkData.stations.sort(
     (a: any, b: any) => b.free_bikes - a.free_bikes
   );
