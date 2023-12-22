@@ -1,5 +1,6 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
+import { error } from 'console';
 
 const MapWrapper = dynamic(() => import('@/components/map/MapWrapper'), {
   ssr: false,
@@ -9,7 +10,8 @@ const fetchNetworkDetails = async (networkId: string) => {
   const response = await fetch(
     `http://api.citybik.es/v2/networks/${networkId}`
   );
-  if (!response.ok) throw new Error('Error getting Data');
+  if (!response.ok) console.error(error);
+
   return response.json();
 };
 
