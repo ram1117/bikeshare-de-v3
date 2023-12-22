@@ -1,9 +1,5 @@
 import React from 'react';
-import dynamic from 'next/dynamic';
-
-const MapWrapper = dynamic(() => import('@/components/map/MapWrapper'), {
-  ssr: false,
-});
+import MapWrapper from '@/components/map/MapWrapper';
 
 const fetchNetworkDetails = async (networkId: string) => {
   const response = await fetch(
