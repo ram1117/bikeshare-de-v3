@@ -1,19 +1,23 @@
-"use client";
+'use client';
 
-import React from "react";
-import { MapContainer, TileLayer, ZoomControl } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
-import MapMarker from "./MapMarker";
-import MapMarkerCluster from "./MapMarkerCluster";
-import PageHeader from "./PageHeader";
+import React from 'react';
+import { MapContainer, TileLayer, ZoomControl } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
+import MapMarker from './MapMarker';
+import MapMarkerCluster from './MapMarkerCluster';
+import PageHeader from './PageHeader';
 
 interface MapWrapperProps {
   networkData: any;
-  busyStations: any;
 }
 
-function MapWrapper({ networkData, busyStations }: MapWrapperProps) {
+function MapWrapper({ networkData }: MapWrapperProps) {
   const { location } = networkData;
+
+  const busyStations = networkData?.stations
+    .sort((a: any, b: any) => b.free_bikes - a.free_bikes)
+    .slice(0, 5);
+
   return (
     <div className="w-full flex flex-col items-center p-4 max-w-[1280px] lg:mt-12">
       <PageHeader
@@ -52,7 +56,7 @@ function MapWrapper({ networkData, busyStations }: MapWrapperProps) {
                   </h2>
                   <h3 className="font-md text-sm lg:text-base">
                     Freie Bikes:
-                    {"  "}
+                    {'  '}
                     {station.free_bikes}
                   </h3>
                   <h3 className="font-md text-sm lg:text-base">{`${station.latitude} , ${station.longitude}`}</h3>
